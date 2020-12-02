@@ -1,6 +1,8 @@
 
 import './App.css';
 import React, {Component} from 'react';
+import {ToDoBanner} from './TODOBANNER';
+import 'bootstrap/dist/css/bootstrap.css';
 
 export default class App extends Component {
   //  Above we have created a class called App the extends the functionality of the Component class
@@ -10,7 +12,7 @@ export default class App extends Component {
 
   //  React components have a special property called "state".  The "state" is used to define the state of data (props)
   this.state = {
-    todoOwner: "Shawn",
+    todoOwner: "Shawn Nelson",
     todoList: [
       {action: "Move burn pile", done: false},
       {action: "Oil change", done: false},
@@ -21,6 +23,15 @@ export default class App extends Component {
     ]
   }
  }//end of ctor
+
+  render = () =>
+    <div>
+      {/* features 1 & 2 */}
+      <ToDoBanner
+        todoOwner = {this.state.todoOwner}
+        todoList = {this.state.todoList}
+      />
+    </div>
 
 }// end of app
 
