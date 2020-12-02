@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 export class ToDoRow extends Component {
     //feature 3 and 4
@@ -9,10 +9,10 @@ export class ToDoRow extends Component {
                 {this.props.item.action}
             </td>
             <td>
-                <input 
-                    type = "checkbox"
-                    checked = {this.props.item.done}
-                    onChange = {() => this.props.callback(this.props.item)}
+                <input
+                    type="checkbox"
+                    checked={this.props.item.done}
+                    onChange={() => this.props.callback(this.props.item)}
                 />
             </td>
         </tr>
